@@ -19,7 +19,7 @@ import RattingAnimation from 'components/views/RattingAnimation/RattingAnimation
 
 export default function BasicExample() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/">
           <Home />
