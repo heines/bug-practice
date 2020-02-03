@@ -1,8 +1,10 @@
 .image-button {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
   &::before {
     display: block;
     position: absolute;
@@ -13,17 +15,22 @@
     content: '';
     background-size: 100% 100%;
     background-image: url('../../assets/bg1.jpg');
+    transform: scale(1.0, 1.0) rotate(0.0001deg);
   }
 
   // hover Animation
+  transition-property: opacity;
+  transition-duration: .4s;
   &::before {
+    transition-property: transform;
     transform-origin: center;
-    transition-duration: .2s;
+    transition-duration: .4s;
   }
 
   &:hover {
+    opacity: 0.7;
     &::before {
-      transform: scale(1.2, 1.2);
+      transform: scale(1.1, 1.1) rotate(0.0001deg);
     }
   }
 
