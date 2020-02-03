@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from 'components/views/Home/Home';
 import RattingAnimation from 'components/views/RattingAnimation/RattingAnimation';
 
 // This site has 3 pages, all of which are rendered
@@ -21,6 +22,9 @@ export default function BasicExample() {
     <Router>
       <Switch>
         <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/ratting-animation">
           <RattingAnimation />
         </Route>
       </Switch>
