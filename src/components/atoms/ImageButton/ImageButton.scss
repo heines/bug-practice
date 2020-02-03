@@ -1,0 +1,30 @@
+.image-button {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-size: 100% 100%;
+    background-image: url('../../assets/bg1.jpg');
+  }
+
+  // hover Animation
+  &::before {
+    transform-origin: center;
+    transition-duration: .2s;
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1.2, 1.2);
+    }
+  }
+
+}
